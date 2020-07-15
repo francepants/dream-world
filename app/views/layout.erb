@@ -14,9 +14,31 @@
     <link rel="stylesheet" href="/stylesheets/main.css" />
   </head>
   <body>
-    <div class="wrapper">
 
-        <%= yield %>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/dreams">Dreams</a></li>
+        <li><a href="/dreams/new">New Dream</a></li>
+      </ul>
+    </nav>
+
+
+    <div class="wrapper">
+        <nav>
+          <ul>
+            <% unless logged_in? %>
+              <li><a href="/signup">Sign Up</a></li>
+              <li><a href="/login">Log in</a></li>
+            <% else %>
+              <li><%= current_user.username %></li>
+              <li><a href="/logout">Log out</a></li>
+            <% end %>
+          </ul>
+        </nav>
+
+        <%= yield %> 
+
 
       <footer class="branding">
         <small>&copy; 2020 <strong>DreamWorld</strong></small>

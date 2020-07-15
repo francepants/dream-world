@@ -1,0 +1,40 @@
+<h1>New Dream Entry</h1>
+
+<form method="post" action="/dreams">
+    <div>
+        <label for="dream_title_id">Dream title:</label>
+        <input type="text" name="dream[title]" id="dream_title_id" required>
+
+        <label for="dream_date">Date:</label>
+        <input type="date" name="dream[date]" id="dream_date" required>
+    </div>
+
+    <br>
+
+    <div>
+        <label for="dreams_genre">Choose a genre:</label>
+        <select name="dream[genre]" id="dreams_genre">
+            <option value="fantasy_magical">Fantasy/Magical</option>
+            <option value="horror">Horror</option>
+            <option value="humor">Humor</option>
+            <option value="realistic">Realistic</option>
+            <option value="romance">Romance</option>
+            <option value="sad">Sad</option>
+            <option value="superhero">Superhero</option>
+            <option value="suspense">Suspense</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+
+    <br>
+
+    <div>
+        <label for="dream"><h3>Dream:</h3></label>
+        <textarea name="dream[dream]" id="dream" rows="25" cols="80" placeholder="Describe your dream:" required></textarea>
+    </div>
+
+    <br>
+    
+    <input type="submit" value="Post Dream Entry">
+
+</form>
