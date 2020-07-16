@@ -69,11 +69,3 @@ class DreamsController < ApplicationController
         # id lives in params[:id]
 
 end
-
-# order the dreams by date entered? 
-# use date:
-# if false
-#     @dreams = Dream.all
-# else
-#     @dreams = Dream.order(id: :desc)
-# end
