@@ -2,24 +2,33 @@
 
 <h1> <%= @dream.title %> </h1>
 <p><%= @dream.date %></p>
-<p>Genre: <%= @dream.genre %></p>
+<p><%= @dream.genre %></p>
 
 <h3>Dream Entry:</h3>
 <p><%= @dream.dream %></p>
 
 
-<%# delete 
- value="delete" #overrides POST method to delete%> 
 
-<form method="post" action="/dreams/<%= @dream.id %>">
-    <input type="hidden" name="_method" value="delete">
+<div class="btn_delete_edit">
+      <%# edit button /dreams/:id/edit %>
+    <form action="/dreams/<%= @dream.id %>/edit">
+        <%# <input type="submit" value="Edit" /> %>
+        <button type="submit" class="btn btn_edit">Edit</button>
+    </form>
+
+    <br>
     
-    <input type="submit" value="Delete">
-</form>
+    <%# delete button value="delete" #overrides POST method to delete%> 
+    <form method="post" action="/dreams/<%= @dream.id %>">
+        <input type="hidden" name="_method" value="delete">
+        
+        <%# <input type="submit" value="Delete"> %>
+        <button type="submit" class="btn_delete">Delete</button>
+    </form>
 
-<br>
-<%# edit button /dreams/:id/edit %>
 
-<form action="/dreams/<%= @dream.id %>/edit">
-    <input type="submit" value="Edit" />
-</form>
+
+  
+
+</div>
+

@@ -5,6 +5,7 @@
     <input type="hidden" name="_method" value="patch">
 
     <div>
+        
         <label for="dream_title_id">Dream title:</label>
         <input type="text" name="dream[title]" id="dream_title_id" value="<%= @dream.title %>">
 
@@ -15,17 +16,18 @@
     <br>
 
     <div>
-        <label for="dreams_genre">Choose a genre:</label>
+        <label for="dreams_genre">Which genre did your dream resemble the most?</label>
         <select name="dream[genre]" id="dreams_genre">
-            <option value="fantasy_magical">Fantasy/Magical</option>
-            <option value="horror">Horror</option>
-            <option value="humor">Humor</option>
-            <option value="realistic">Realistic</option>
-            <option value="romance">Romance</option>
-            <option value="sad">Sad</option>
-            <option value="superhero">Superhero</option>
-            <option value="suspense">Suspense</option>
-            <option value="other">Other</option>
+            <option value="Fantasy/Magical" <%= 'selected' if @dream.genre == "Fantasy/Magical" %>>Fantasy/Magical</option>
+            <option value="Horror" <%= 'selected' if @dream.genre == "Horror" %>>Horror</option>
+            <option value="Humor" <%= 'selected' if @dream.genre == "Humor" %>>Humor</option>
+            <option value="Realistic" <%= 'selected' if @dream.genre == "Realistic" %>>Realistic</option>
+            <option value="Romance" <%= 'selected' if @dream.genre == "Romance" %>>Romance</option>
+            <option value="Sad" <%= 'selected' if @dream.genre == "Sad" %>>Sad</option>
+            <option value="Spiritual" <%= 'selected' if @dream.genre == "Spiritual" %>>Spiritual</option>
+            <option value="Superhero" <%= 'selected' if @dream.genre == "Superhero" %>>Superhero</option>
+            <option value="Suspense" <%= 'selected' if @dream.genre == "Suspense" %>>Suspense</option>
+            <option value="Other" <%= 'selected' if @dream.genre == "Other" %>>Other</option>
         </select>
     </div>
 
@@ -33,12 +35,11 @@
 
     <div>
         <label for="dream"><h3>Dream:</h3></label>
-        <textarea name="dream[dream]" id="dream" rows="25" cols="80" placeholder="Describe your dream:"><%= @dream.dream %></textarea>
+        <textarea name="dream[dream]" id="dream" rows="25" cols="80" placeholder="Describe your dream:" wrap="hard"><%= @dream.dream %></textarea>
     </div>
 
     <br>
 
-    <input type="submit" value="Update Dream Entry">
+    <%# <input type="submit" value="Update Dream Entry"> %>
+    <button type="submit" class="btn_update">Update Dream Entry</button>
 </form>
-
-<%# <%= 'checked' if @todo.completed %>   

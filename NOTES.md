@@ -65,13 +65,26 @@ Destroy Routes
 
 
 # Notes
-
+enoch's - 
 <%= 'checked' if @todo.completed %>
 
 <%= if option:selected %>
 
 <%='selected' if @dream.horror%>
 
-<%= 'selected' if @dream.horror %>
 
-if selected ?  : 
+
+if selected ? true : false
+
+# welcome user?
+    <p class="welcome_user"><%= current_user.username %></p>
+
+
+# nav with home, dreams, new dream
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/dreams">Dreams</a></li>
+        <li><a href="/dreams/new">New Dream</a></li>
+      </ul>
+    </nav>

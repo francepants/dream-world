@@ -1,12 +1,12 @@
-<h1>Here's a list of your dreams...</h1>
+<h1>Your dreams...</h1>
 <hr>
 <% @dreams.each do |dream| %>
 
     <div>
         <h3><a href="/dreams/<%= dream.id %>"><%= dream.title %></a></h3>
         <br>
-        <p><u>Date</u>: <%= dream.date %></p>
-        <p><u>Genre</u>: <%= dream.genre %></p>
+        <p><%= dream.date %></p>
+        <p><%= dream.genre %></p>
     </div>
 
 <!-- <p><a href="/dreams/<%= dream.id %>">View more details about this dream...</a></p> -->

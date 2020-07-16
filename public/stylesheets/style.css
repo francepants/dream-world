@@ -1,0 +1,217 @@
+@media screen {
+    /* --- Reset Styles --- */
+    * {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  
+    html, body {
+      height: 100%;
+      width: 100%;
+    }
+
+    /* --- Welcome Page Styles --- */
+  body {
+    background-color: lavender;
+    color: #333;
+    font-family: 'Merriweather Sans', sans-serif;
+    line-height: 18px;
+    text-align: center;
+  }
+
+  .wrapper {
+    background: #fff;
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
+    box-shadow: 0 0 50px rgba(0,0,0,.3);
+    margin: 16px auto;
+    max-width: 960px;
+    padding: 2.25%; /* 18px / 800px */
+    width: 85%;
+    
+  }
+
+  .top_nav {
+    background-color: #333;
+    overflow: hidden;
+  }
+
+  .top_nav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  /* Change the color of links on hover */
+.top_nav a:hover {
+    background-color: lavender;
+    color: black;
+  }
+
+  .top_nav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .welcome_greeting {
+    font-size: 5.625rem;
+    line-height: 6rem;
+    font-family: 'Sacramento', cursive;
+    text-align: center;
+    padding: 40px 0;
+  }
+
+  .welcome_user {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 4rem;
+    padding: 60px 0;
+  }
+
+  .welcome_page {
+      text-align: center;
+  }
+
+  h1 {
+    font-size: 36px;
+    line-height: 54px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  h2 {
+    border-bottom: 2px solid #ccc;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 16px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  h3 {
+    font-size: 18px;
+    line-height: 36px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  p {
+    margin-bottom: 18px;
+  }
+
+
+  footer.branding {
+    border-top: 2px solid #ccc;
+    margin-top: 20px;
+    padding-top: 20px;
+    text-align: right;
+  }
+
+/* login and sign up*/
+.login, .signup{
+    text-align: left;
+}
+
+/* buttons */
+.btn_edit {
+    background-color: white;
+    border: solid rgb(86, 124, 145) 1px;
+    color: none;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 20%;
+  }
+
+  .btn_edit:hover {
+    background-color: rgb(86, 124, 145);
+    color: white;
+  }
+
+.btn_delete {
+    background-color: white;
+    border: solid red 1px;
+    color: none;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 20%;
+  }
+
+  .btn_delete:hover {
+    background-color: red;
+    color: white;
+  }
+
+  .btn_update {
+    background-color: white;
+    border: solid rgb(136, 189, 133) 1px;
+    color: rgb(45, 45, 45);
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 20%;
+  }
+
+  .btn_update:hover {
+    background-color: rgb(136, 189, 133);
+    color: white;
+  }
+
+  .btn_post {
+    background-color: white;
+    border: solid palegoldenrod 1px;
+    color: rgb(45, 45, 45);
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 20%;
+  }
+
+  .btn_post:hover {
+    background-color: palegoldenrod;
+    color: rgb(45, 45, 45);
+  }
+
+  .btn {
+    background-color: white;
+    border: solid rgb(172, 129, 181) 1px;
+    color: rgb(45, 45, 45);
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 20%;
+  }
+
+  .btn:hover {
+    background-color: rgb(172, 129, 181);
+    color:white;
+  }
+
+
+}

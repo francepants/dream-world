@@ -5,24 +5,25 @@
         <label for="dream_title_id">Dream title:</label>
         <input type="text" name="dream[title]" id="dream_title_id" required>
 
-        <label for="dream_date">Date:</label>
-        <input type="date" name="dream[date]" id="dream_date" required>
+        <label for="dream_date">Date of the dream:</label>
+        <input type="date" name="dream[date]" id="dream_date" max="" required>
     </div>
 
     <br>
 
     <div>
-        <label for="dreams_genre">Choose a genre:</label>
+        <label for="dreams_genre">Which genre does your dream resemble the most?</label>
         <select name="dream[genre]" id="dreams_genre">
-            <option value="fantasy_magical">Fantasy/Magical</option>
-            <option value="horror">Horror</option>
-            <option value="humor">Humor</option>
-            <option value="realistic">Realistic</option>
-            <option value="romance">Romance</option>
-            <option value="sad">Sad</option>
-            <option value="superhero">Superhero</option>
-            <option value="suspense">Suspense</option>
-            <option value="other">Other</option>
+            <option value="Fantasy/Magical">Fantasy/Magical</option>
+            <option value="Horror">Horror</option>
+            <option value="Humor">Humor</option>
+            <option value="Realistic">Realistic</option>
+            <option value="Romance">Romance</option>
+            <option value="Sad">Sad</option>
+            <option value="Spiritual">Spiritual</option>
+            <option value="Superhero">Superhero</option>
+            <option value="Suspense">Suspense</option>
+            <option value="Other">Other</option>
         </select>
     </div>
 
@@ -30,11 +31,12 @@
 
     <div>
         <label for="dream"><h3>Dream:</h3></label>
-        <textarea name="dream[dream]" id="dream" rows="25" cols="80" placeholder="Describe your dream:" required></textarea>
+        <textarea name="dream[dream]" id="dream" rows="25" cols="80" placeholder="Describe your dream:" required wrap="hard"></textarea>
     </div>
 
     <br>
     
-    <input type="submit" value="Post Dream Entry">
+    <%# <input type="submit" value="Post Dream Entry"> %>
+     <button type="submit" class="btn_post">Post Dream Entry</button>
 
 </form>

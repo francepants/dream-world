@@ -10,7 +10,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/' do
-    @greeting = "Welcome to your dream world..."
+    @greeting = "Welcome to your dream world"
     erb :welcome
   end
 
