@@ -88,3 +88,21 @@ if selected ? true : false
         <li><a href="/dreams/new">New Dream</a></li>
       </ul>
     </nav>
+
+
+# flash 
+gem 'rack-flash3'
+
+require 'rack-flash' in applicationcontroller under require config...
+
+use Rack::Flash
+
+      <%# flash error: set to an array of errors, iterate through errors, then display as own div %>
+        <% if flash[:error] %>
+          <% flash[:error].each do |error| %>
+          <div>
+            <%= error %>
+          </div>
+        <% end %>
+
+flash.now[:error] = "error message!!!!!"

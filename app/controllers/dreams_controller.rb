@@ -1,20 +1,24 @@
 class DreamsController < ApplicationController
-    # READ 1
+
+    use Rack::Flash
+
+    # READ 1 - read a list of dreams
     get '/dreams' do
         # @dreams = Dream.all
         @dreams = current_user.dreams
-
         erb :'dreams/index'
     end
 
-    # CREATE 1
+    # CREATE 1 - get a new dream form
     get '/dreams/new' do
         erb :'dreams/new'
     end
 
-    # CREATE 2
+    # CREATE 2 - post the new dream form
     post '/dreams' do
         dream = current_user.dreams.build(params[:dream])
+        # the above line is associated build. current_user is what you want to associate it to. creates a dream with a foreign key already filled out. this is the has_many version
+        # the belongs_to would be @user = Dream.build_user() - would build user based on dreams
         if dream.save
             redirect '/dreams'
         else
@@ -22,13 +26,18 @@ class DreamsController < ApplicationController
         end
     end
 
-    # UPDATE 1
+    # UPDATE 1 - edits the dream
     get '/dreams/:id/edit' do
         set_dream
-        erb :'dreams/edit'
+        #doesnt allow you to edit someone else's dream entry
+        if current_user == @dream.user_id
+            erb :'dreams/edit'
+        else
+            redirect '/dreams'
+        end
     end
 
-    # READ 2
+    # READ 2 - view more details about a dream
     get '/dreams/:id' do
         set_dream
         if set_dream
@@ -39,10 +48,10 @@ class DreamsController < ApplicationController
         #params is a hash for accessing a key called id, which is given by our route variable
     end
 
-    # UPDATE 2
+    # UPDATE 2 - patch request to update the dream
     patch '/dreams/:id' do
         set_dream
-        if @dream.update(
+        if current_user == @dream.user && @dream.update(
             title: params[:dream][:title],
             date: params[:dream][:date],
             genre: params[:dream][:genre],
@@ -57,7 +66,9 @@ class DreamsController < ApplicationController
     # DELETE
     delete '/dreams/:id' do
         set_dream
-        @dream.destroy
+        if current_user == @dream.user
+            @dream.destroy 
+        end
         redirect '/dreams'
     end
     

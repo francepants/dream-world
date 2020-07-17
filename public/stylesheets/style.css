@@ -100,7 +100,7 @@
   }
 
   p {
-    margin-bottom: 18px;
+    /* margin-bottom: 10px; */
     line-height: 2;
   }
 
@@ -111,6 +111,12 @@
     padding-top: 20px;
     text-align: right;
   }
+
+  textarea {
+    font-family: 'Merriweather Sans', sans-serif;
+    line-height: 2;
+    resize: none;
+    }
 
 
 /* login and sign up*/
@@ -128,7 +134,7 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 10px;
+    font-size: 12px;
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
@@ -148,7 +154,7 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 10px;
+    font-size: 12px;
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
@@ -172,7 +178,7 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 10px;
+    font-size: 12px;
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
@@ -192,7 +198,7 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 10px;
+    font-size: 12px;
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
@@ -212,7 +218,7 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 10px;
+    font-size: 12px;
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;

@@ -16,9 +16,10 @@
     <br>
 
     <div>
-        <label for="dreams_genre">Which genre did your dream resemble the most?</label>
+        <label for="dreams_genre">What kind of dream was it?</label>
         <select name="dream[genre]" id="dreams_genre">
             <option value="Fantasy/Magical" <%= 'selected' if @dream.genre == "Fantasy/Magical" %>>Fantasy/Magical</option>
+            <option value="Happy" <%= 'selected' if @dream.genre == "Happy" %>>Happy</option>
             <option value="Horror" <%= 'selected' if @dream.genre == "Horror" %>>Horror</option>
             <option value="Humor" <%= 'selected' if @dream.genre == "Humor" %>>Humor</option>
             <option value="Realistic" <%= 'selected' if @dream.genre == "Realistic" %>>Realistic</option>
@@ -27,6 +28,7 @@
             <option value="Spiritual" <%= 'selected' if @dream.genre == "Spiritual" %>>Spiritual</option>
             <option value="Superhero" <%= 'selected' if @dream.genre == "Superhero" %>>Superhero</option>
             <option value="Suspense" <%= 'selected' if @dream.genre == "Suspense" %>>Suspense</option>
+            <option value="Trippy" <%= 'selected' if @dream.genre == "Trippy" %>>Trippy</option>
             <option value="Other" <%= 'selected' if @dream.genre == "Other" %>>Other</option>
         </select>
     </div>
@@ -40,6 +42,5 @@
 
     <br>
 
-    <%# <input type="submit" value="Update Dream Entry"> %>
     <button type="submit" class="btn_update">Update Dream Entry</button>
 </form>
