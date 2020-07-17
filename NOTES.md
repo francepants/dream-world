@@ -99,10 +99,11 @@ use Rack::Flash
 
       <%# flash error: set to an array of errors, iterate through errors, then display as own div %>
         <% if flash[:error] %>
-          <% flash[:error].each do |error| %>
-          <div>
-            <%= error %>
-          </div>
+            <% flash[:error].each do |error| %>
+                <div>
+                    <%= error %>
+                </div>
+            <% end %>
         <% end %>
 
 flash.now[:error] = "error message!!!!!"
