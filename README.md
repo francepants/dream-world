@@ -14,7 +14,7 @@ With Dream World, you can post a new dream entry with a title, date, and genre/c
 - run 'shotgun' in the terminal
 
 ## Fourth 
-- Dream World can be accessed by going to localhost:9393 in your browser. 
+- Dream World can be accessed by going to http://localhost:9393/ in your browser. 
 
 
 ## Contributing
