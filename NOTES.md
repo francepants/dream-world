@@ -107,3 +107,7 @@ use Rack::Flash
         <% end %>
 
 flash.now[:error] = "error message!!!!!"
+
+edit button:
+
+<input type="submit" value="Edit" />

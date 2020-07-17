@@ -30,7 +30,7 @@ class DreamsController < ApplicationController
     get '/dreams/:id/edit' do
         set_dream
         #doesnt allow you to edit someone else's dream entry
-        if current_user == @dream.user_id
+        if current_user == @dream.user
             erb :'dreams/edit'
         else
             redirect '/dreams'
