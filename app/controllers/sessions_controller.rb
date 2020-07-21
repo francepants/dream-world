@@ -1,9 +1,7 @@
 class SessionsController < ApplicationController
     use Rack::Flash
 
-    
     get '/login' do
-
         erb :'sessions/new'
     end
 
@@ -13,7 +11,7 @@ class SessionsController < ApplicationController
             session[:user_id] = @user.id
             redirect '/dreams'
         else
-            flash.now[:error] = ["Username, email, or password are incorrect."]
+            flash.now[:error] = ["Username, email, or password incorrect."]
             erb :'sessions/new'
         end
     end

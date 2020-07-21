@@ -11,6 +11,7 @@ class UsersController < ApplicationController
             session[:user_id] = @user.id
             redirect '/dreams'
         else
+            flash.now[:error] = ["Email is already in use."]
             erb :'users/new'
         end
     end
